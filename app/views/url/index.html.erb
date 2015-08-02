@@ -1,0 +1,13 @@
+Shortcut url: 
+<form action="/n" method="POST">
+	<input name="link_to" type="text">
+	<button type="submit">Short !</button>
+</form>
+
+<h1>List top links : </h1>
+<ul>
+	<% @topLinks.each do |link| %>
+	<li><a href="/<%= link[:hash_string] %>"><%= link[:link_to] %></a> view(s) : <%= link[:views] %></li>
+	<% end %>
+
+</ul>
